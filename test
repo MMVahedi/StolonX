@@ -63,7 +63,7 @@ if [ -n "${vetRes}" ]; then
 fi
 
 echo "Checking govet -shadow ..."
-go install golang.org/x/tools/go/analysis/passes/shadow/cmd/shadow
+go install golang.org/x/tools/go/analysis/passes/shadow/cmd/shadow@v0.44.0
 export PATH="$(go env GOPATH)/bin":${PATH}
 shadow_tool=$(which shadow)
 vetRes=$(${shadow_tool} ${PACKAGES})
